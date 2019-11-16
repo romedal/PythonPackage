@@ -3,13 +3,13 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>5a33fd03-a8c8-40e5-90e6-e7215ebfb233</ProjectGuid>
-    <ProjectHome>.</ProjectHome>
-    <StartupFile>PythonApplication1.py</StartupFile>
-    <SearchPath>
-    </SearchPath>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>PythonPackage.py</StartupFile>
+    <SearchPath>Animals</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>PythonApplication1</Name>
+    <Name>PythonPackage</Name>
     <RootNamespace>PythonApplication1</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -21,7 +21,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="PythonApplication1.py" />
+    <Compile Include="Animals\Birds.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Animals\Mammals.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Animals\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PythonPackage.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Animals\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
