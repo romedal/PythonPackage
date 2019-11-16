@@ -6,6 +6,6 @@ class Mammals:
  
  
     def printMembers(self):
-        print('Printing members of the Mammals class')
+        print('Printing members of the Mammals class ...')
         for member in self.members:
             print('\t%s ' % member)
